@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "API para consultar valor, código de barras e vencimento de boletos pela linha digitável",
   "main": "app.js",
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "https://github.com/JoaoP12/ConsultaBoletos"
   },
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "author": "João Pedro Lopes",
   "license": "ISC",
@@ -21,5 +22,12 @@
     "jest": "^28.1.1",
     "nodemon": "^2.0.16",
     "supertest": "^6.2.3"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   }
 }
